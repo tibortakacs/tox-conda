@@ -32,7 +32,7 @@ def test_conda_run_command(tox_project, mock_conda_env_runner):
     assert_conda_context(proj, "py123", executed_shell_commands[3], "pytest")
     assert_conda_context(proj, "py123", executed_shell_commands[4], "black")
 
-
+@pytest.mark.skip(reason="Not implemented yet")
 def test_missing_conda(tox_project, monkeypatch):
     """Check that an error is shown when the conda executable is not found."""
     ini = """

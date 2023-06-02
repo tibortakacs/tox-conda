@@ -14,7 +14,7 @@ def test_conda_create(tox_project, mock_conda_env_runner):
     """
     proj = tox_project({"tox.ini": ini})
 
-    outcome = proj.run("-e", "py123")
+    outcome = proj.run("-e", "py123", "-vv")
     outcome.assert_success()
 
     executed_shell_commands = mock_conda_env_runner
